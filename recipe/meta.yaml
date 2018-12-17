@@ -1,13 +1,13 @@
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
   name: pydoe2
   version: {{ version }}
 
 source:
-    fn: pyDOE2-{{ version }}.zip
-    url: https://pypi.io/packages/source/p/pyDOE2/pyDOE2-{{ version }}.zip
-    sha256: c5c0c343bec9b7d0f6650f2d0686802c212ed36ef8b1f895d9cde2ea62768736
+    fn: pyDOE2-{{ version }}.tar.gz
+    url: https://pypi.io/packages/source/p/pydoe2/pyDOE2-{{ version }}.tar.gz
+    sha256: 1d6fefd4e4ac1882436994d2dd91777fe829cd8cf08c92e5f7533f494b26699f
 
 build:
   noarch: python
@@ -41,3 +41,4 @@ about:
 extra:
   recipe-maintainers:
     - jschueller
+    - druvus
