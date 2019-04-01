@@ -1,4 +1,4 @@
-{% set version = "1.1.2" %}
+{% set version = "1.2.0" %}
 
 package:
   name: pydoe2
@@ -7,7 +7,7 @@ package:
 source:
     fn: pyDOE2-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/p/pydoe2/pyDOE2-{{ version }}.tar.gz
-    sha256: 1d6fefd4e4ac1882436994d2dd91777fe829cd8cf08c92e5f7533f494b26699f
+    sha256: a4f94331a81c10b9f6493f6ba3e96cc31f9404e7940cce2c8267afbb84c18b9a
 
 build:
   noarch: python
