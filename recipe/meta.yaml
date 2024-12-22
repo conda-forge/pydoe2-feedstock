@@ -6,26 +6,28 @@ package:
 
 source:
     fn: pyDOE2-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/p/pydoe2/pyDOE2-{{ version }}.tar.gz
+    url: https://pypi.org/packages/source/p/pydoe2/pyDOE2-{{ version }}.tar.gz
     sha256: 5492b0f984af52da3af20b1cd61deb21b067c858e65243ec3ba573375f0d6720
 
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
     - setuptools
 
   run:
-    - python
+    - python >={{ python_min }}
     - scipy >=0.13
     - numpy >=1.8
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyDOE2
 
